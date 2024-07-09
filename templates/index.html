@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ID Card Combiner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <div id="top-bar">
+      <div id="title">ID Card Combiner</div>
+    </div>
+    <div class="container">
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="front_image">1. Enter Front Image</label>
+        <input type="file" name="front_image" id="front_image" required>
+        <label for="back_image">2. Enter Back Image</label>
+        <input type="file" name="back_image" id="back_image" required>
+        <button type="submit">Combine Now</button>
+      </form>
+      {% if request.args.get('combined_image') %}
+        <div class="result-img">
+          <h2>Combined Image:</h2>
+          <img src="{{ url_for('static', filename=request.args.get('combined_image')) }}" alt="Combined ID Photo">
+          <div>
+            <a href="{{ url_for('download_file', filename=request.args.get('combined_image')) }}" class="download-link">Download Combined Image</a>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </body>
+</html>

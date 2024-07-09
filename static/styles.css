@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d3d3d3;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  input[type="file"] {
+    display: block;
+    margin: 20px auto;
+  }
+  
+  button {
+    background-color: #e79aff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  
+  button:hover, .download-link:hover {
+    background-color: #d06fe8;
+  }
+  
+  .result-img {
+    margin-top: 20px;
+  }
+  
+  #top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d3d3;
+    padding: 10px 20px;
+  }
+  
+  #title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #691883;
+  }
+  
+  .download-link { 
+  background-color: #8b45a0;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    margin-top: 20px;
+  }
