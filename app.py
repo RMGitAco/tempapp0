@@ -39,6 +39,7 @@ def upload_files():
         back_file = request.files['back_image']
 
         if front_file and back_file:
+            # Generate unique filenames for the uploaded and output files
             front_filename = str(uuid.uuid4()) + "_" + front_file.filename
             back_filename = str(uuid.uuid4()) + "_" + back_file.filename
             output_filename = str(uuid.uuid4()) + "_combined.jpg"
